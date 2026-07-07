@@ -1,0 +1,426 @@
+/* =========================================================
+   JELLYFIN NETFLIX DARK THEME
+   Compatible Jellyfin 10.10+
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+    --jf-red: #E50914;
+    --jf-red-hover: #b20710;
+    --jf-bg: #0b0b0f;
+
+    --theme-primary: #E50914 !important;
+    --primary-color: #E50914 !important;
+    --accent-color: #E50914 !important;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+body,
+.backgroundContainer {
+    background: var(--jf-bg) !important;
+    color: #fff !important;
+}
+
+
+.inputLabel {
+    color:#fff !important;
+}
+
+
+.page,
+.mainAnimatedPage,
+.emby-scroller {
+    padding-top:60px !important;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.skinHeader {
+    background-color:rgba(0,0,0,.35) !important;
+    backdrop-filter:blur(10px);
+}
+
+
+/* =========================================================
+   USER AVATAR
+   IMPORTANT:
+   Jellyfin utilise un background-image inline
+   ========================================================= */
+
+.headerUserButtonRound {
+
+
+    display:block !important;
+
+    border-radius:50% !important;
+
+    overflow:hidden !important;
+
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+
+    opacity:1 !important;
+    visibility:visible !important;
+
+    box-shadow:none !important;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navMenuOption,
+.emby-tab-button {
+
+    color:#fff !important;
+
+    border:none !important;
+    box-shadow:none !important;
+}
+
+
+.navMenuOption:hover,
+.emby-tab-button:hover {
+
+    color:var(--jf-red) !important;
+
+    background-color:rgba(229,9,20,.10) !important;
+}
+
+
+.navMenuOption-selected,
+.emby-tab-button-active {
+
+    color:var(--jf-red) !important;
+}
+
+
+/* =========================================================
+   ICONES
+   ========================================================= */
+
+/*
+ NE PAS TOUCHER :
+ .paper-icon-button-light
+ .headerButton
+ car l'avatar utilise ces classes
+*/
+
+
+.iconButton,
+.btnIcon,
+.navMenuOption-icon,
+.emby-tab-button-icon {
+
+    border:none !important;
+    box-shadow:none !important;
+}
+
+
+.iconButton:hover,
+.btnIcon:hover {
+
+    color:var(--jf-red) !important;
+
+    background-color:rgba(229,9,20,.10) !important;
+}
+
+
+.iconButton:hover svg,
+.btnIcon:hover svg {
+
+    fill:var(--jf-red) !important;
+    stroke:var(--jf-red) !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btnPrimary,
+.btnPlay,
+.button-submit {
+
+    background:var(--jf-red) !important;
+
+    color:white !important;
+
+    border:none !important;
+}
+
+.btnPrimary:hover,
+.btnPlay:hover,
+.button-submit:hover {
+
+    background:var(--jf-red-hover) !important;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.cardBox {
+
+    transition:.2s ease;
+}
+
+
+.cardBox:hover {
+
+    transform:scale(1.04);
+}
+
+
+.cardPadder,
+.cardOverlayContainer {
+
+    border:none !important;
+
+    box-shadow:none !important;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.itemProgressBarForeground,
+progress::-webkit-progress-value {
+
+    background:var(--jf-red) !important;
+}
+
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.playedIndicator,
+.countIndicator,
+.indicator,
+.mediaSourceIndicator {
+
+    background:var(--jf-red) !important;
+
+    color:#fff !important;
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.checkboxOutline {
+
+    border-color:#fff !important;
+}
+
+.material-icons.checkboxIcon.checkboxIcon-checked.check {
+    background:var(--jf-red) !important;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.layout-splash,
+.splashScreen,
+.splash,
+.pageLoader,
+.loadingOverlay {
+
+    color:var(--jf-red) !important;
+}
+
+
+.layout-splash svg,
+.splashScreen svg,
+.splash svg,
+.pageLoader svg,
+.loadingOverlay svg {
+
+    fill:var(--jf-red) !important;
+    stroke:var(--jf-red) !important;
+}
+
+:focus,
+:focus-visible {
+
+    outline:none !important;
+    box-shadow:none !important;
+}
+
+
+/* =========================================================
+   MATERIAL
+   ========================================================= */
+
+.mdl-button:hover,
+.mdl-button--raised:hover,
+.mdl-button:active {
+
+    background-color:rgba(229,9,20,.12) !important;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+
+    width:10px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background:#111;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:#333;
+
+    border-radius:20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:var(--jf-red);
+}
+/* =========================================================
+   GLOBAL HOVER - RED THEME
+   ========================================================= */
+
+
+/* Boutons Jellyfin */
+button:hover,
+.btn:hover,
+.button:hover,
+.emby-button:hover,
+.emby-button-focussed:hover,
+.emby-button:hover .emby-button-foreground,
+
+.mdl-button:hover,
+.mdl-button--raised:hover,
+.paper-icon-button-light:hover,
+.iconButton:hover,
+.btnIcon:hover {
+
+    color: #E50914 !important;
+    background-color: rgba(229, 9, 20, 0.12) !important;
+}
+
+
+/* Icônes SVG au survol */
+button:hover svg,
+.btn:hover svg,
+.emby-button:hover svg,
+.paper-icon-button-light:hover svg,
+.iconButton:hover svg,
+.btnIcon:hover svg {
+
+    fill: #E50914 !important;
+    stroke: #E50914 !important;
+}
+
+
+/* Texte des boutons */
+.emby-button:hover .emby-button-foreground,
+.mdl-button:hover .mdl-button__label {
+
+    color: #E50914 !important;
+}
+
+
+/* Ripple Material Design (bleu Jellyfin) */
+.mdl-js-ripple-effect .mdl-ripple {
+
+    background: #E50914 !important;
+}
+/* =========================================================
+   JELLYFIN 10.10+ SLIDERS RED THEME
+   ========================================================= */
+
+/* Conteneur */
+.mdl-slider-background-flex-container {
+    background: transparent !important;
+}
+
+
+/* Piste complète du média (fond gris) */
+.mdl-slider-background-flex {
+    background: rgba(255,255,255,.25) !important;
+}
+
+
+.mdl-slider-background-flex-inner {
+    background: transparent !important;
+}
+
+
+/* Partie restante */
+.mdl-slider-background-upper {
+
+    background: rgba(255,255,255,.25) !important;
+
+}
+
+
+/* Partie déjà lue */
+.mdl-slider-background-lower {
+
+    background: #E50914 !important;
+
+}
+
+
+/* Point du slider */
+.osdPositionSlider::-webkit-slider-thumb,
+.osdVolumeSlider::-webkit-slider-thumb {
+
+    background:#E50914 !important;
+
+    border-color:#E50914 !important;
+
+}
+
+
+.osdPositionSlider::-moz-range-thumb,
+.osdVolumeSlider::-moz-range-thumb {
+
+    background:#E50914 !important;
+
+    border-color:#E50914 !important;
+
+}
+/* =========================================================
+   JELLYFIN NO SPINNER
+   ========================================================= */
+.docspinner,
+.mdl-spinner,
+.layout-splash .mdl-spinner,
+.loadingOverlay .mdl-spinner {
+
+    display:none !important;
+
+}
